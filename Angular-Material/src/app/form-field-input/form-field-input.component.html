@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>Inputs</h1>
+
+  <form class="form-container">
+    
+    <mat-form-field>
+      <mat-label>Nome</mat-label>
+      <input type="text" name="nome" matInput autofocus />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Sobrenome</mat-label>
+      <input type="text" matInput name="sobrenome" />
+      <mat-icon matPrefix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Cidade</mat-label>
+      <input type="text" matInput name="cidade" [(ngModel)]="value"/>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Usuário</mat-label>
+      <input #userName type="text" matInput name="usuario" [(ngModel)]="value" maxlength="20"/>
+      <mat-hint align="start">Apenas {{userName.maxLength}} caracteres</mat-hint>
+      <mat-hint align="end">{{userName.value.length}}/{{userName.maxLength}}</mat-hint>
+    </mat-form-field>
+  </form>
+</div>
